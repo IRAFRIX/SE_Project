@@ -12,12 +12,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+
+		function password_show_hide(){
+            let x=document.getElementById("password");
+            let show_eye=document.getElementById("show_eye");
+            let hide_eye=document.getElementById("hide_eye");
+            hide_eye.classList.remove("d-none");
+            if(x.type==="password"){
+                x.type="text";
+                show_eye.style.display="none";
+                hide_eye.style.display="block";
+            }else{
+                x.type="password";
+                show_eye.style.display="block";
+                hide_eye.style.display="none";
+            }
+        }
+		
+		function createPassword() {
+            var passwordInputBlock = document.getElementById("password-input-block");
+			passwordInputBlock.style.display = "block";
+		}
+		
+		function closePassword() {
+            var passwordInputBlock = document.getElementById("password-input-block");
+			passwordInputBlock.style.display = "none";
+		}
+		
+		function savePassword() {
+			var passwordInput = document.getElementById("password-input");
+			var password = passwordInput.value;
+			if (password != "") {
+				// Save the password to a database or use it in your application
+				alert("Your password has been saved!");
+				passwordInput.value = "";
+				closePassword();
+			}
+		}
+	</script>
     <title>CreateRoom</title>
 </head>
 <body>
@@ -25,22 +60,19 @@
 <div class="card text-dark bg-white border-primary">
                 <div class="card-header bg-primary text-white">กรอกข้อมูลห้องแชท</div>
                 <div class="card-body">
-                    <form action="register_save.php" method="post">
+                    <!--<form action="register_save.php" method="post">-->
                         <div class="row mb-2">
                             <label class="col-mb-3 col-form-label">ชื่อห้องแชท</label>
                             <input type="text" name="rn" class="form-control" require>
-                            <div class="row mb-2">
-                                <label class="col-mb-3 col-form-label">รหัสผ่านห้องแชท</label>
-                                <input type="password" name="rpwd" class="form-control" require>
-                            </div>
+
 <!--ปุ่มเปิด-ปิด Private-->
-<div class="btn-group btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-outline-success" data-bs-toggle="button" aria-pressed="true">
-            <input type="button" name="options" id="pub" autocomplete="off">Public
-        </label>
-        <label class="btn btn-outline-danger">
-            <input type="button" name="options" id="pri" autocomplete="off">Private
-        </label>
-    </div>
+    <div class="container mt-5">
+        <button class="btn btn-success" onclick="closePassword()">Public</button>
+		<button class="btn btn-danger" onclick="createPassword()">Private</button>
+		<div id="password-input-block" class="mt-3" style="display: none;">
+			<input type="password" id="password-input" class="form-control mb-3" placeholder="Enter your new password">
+			<button class="btn btn-primary mr-3" onclick="savePassword()">Save Password</button>
+		</div>
+	</div>
 </body>
 </html>
