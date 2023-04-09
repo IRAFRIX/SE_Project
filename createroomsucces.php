@@ -4,7 +4,7 @@
     $RoomName=$_POST['rn'];
     $RoomPassword=$_POST['rpwd'];
     $Roomid=$_POST['room'];
-    $PriRoomid=$_POST['roomCode']
+    //$PriRoomid=$_POST['roomCode']
     //ตัวแปร
 ?>
 
@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
-        สร้างห้อง <?php echo $rn; ?> (ID: <?php echo $room; ?>) สำเร็จแล้ว!
+        สร้างห้อง <?php echo $RoomName; ?> (ID: <?php echo $Roomid; ?>) สำเร็จแล้ว!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 </body>

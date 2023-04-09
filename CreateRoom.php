@@ -5,6 +5,17 @@
     //$RoomPassword=$_POST['rpwd'];
     //$Roomid=$_POST['room'];
     //ตัวแปร
+    if(isset($_POST['submit'])){
+        $RoomName=$_POST['rn'];
+        $Roomid=$_POST['room'];
+
+        if($_POST['room'] == "private" && $_POST['password-input'] == ""){
+            echo "กรุณาใส่รหัส";
+        } else {
+            header("Location: createroomsucces.php");
+            exit();
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +75,7 @@
                             กรอกข้อมูลห้องแชท
                         </p>
                     </header>
-                    <form action="createroomsucces.php" method="get">
+                    <form method="post" action="createroomsucces.php">
                     <div class="card-content">
                         <div class="field">
                             <label class="label">ชื่อห้องแชท</label>
@@ -81,10 +92,10 @@
                         <button class="button is-danger" onclick="createPassword()">Private</button>
                         <div id="password-input-block" class="is-hidden mt-3">
                             <input type="password" id="password-input" class="input mb-3" placeholder="Enter your new password">
-                            <button class="button is-primary mr-3" onclick="savePassword()">Save Password</button>
                                     </div>
                                 </div>
                             </div>
+                            <!--<form method="post" action="createroomsucces.php">-->
                             <div class="field is-grouped mt-5">
                             <div class="control">
                                 <button type="submit" class="button is-primary">Submit</button>
@@ -93,6 +104,7 @@
                                 <button type="reset" class="button is-light">Reset</button>
                             </div>
                             </div>
+                            <!--</form>-->
                         </div>
                     </div>
                     </form>
