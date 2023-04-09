@@ -19,13 +19,26 @@ if(isset($_GET['id'])){
   if($room){
     echo "กำลังอยู่ในห้อง: ".$room['name']."";
   } else {
-    echo "ไม่พบห้องที่เลือก";
+    echo "ไม่พบห้องที่เลือก1";
+  }
+  $conn=null;
+} else if (isset($_GET['pid'])){
+  $id=$_GET['pid'];
+  $sql="SELECT name FROM pvt_rooms WHERE id=?";
+  $stmt=$conn->prepare($sql);
+  $stmt->execute([$id]);
+  $room=$stmt->fetch();
+  if($room){
+    echo "กำลังอยู่ในห้อง: ".$room['name']."";
+  } else {
+    echo "ไม่พบห้องที่เลือก2";
   }
   $conn=null;
 } else {
-  echo "ไม่พบห้องที่เลือก";
+  echo "ไม่พบห้องที่เลือก3";
 }
 ?>
+
     <p align= "center"><a href="index.php">กลับสู่หน้าหลัก</a></p>
 </body>
 </html>

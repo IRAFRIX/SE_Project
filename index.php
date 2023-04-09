@@ -15,14 +15,14 @@ if(isset($_POST['roomSelect'])){
 } elseif(isset($_POST['roomCode'])) {
   $roomCode = $_POST['roomCode'];
   $conn=new PDO("mysql:host=localhost;dbname=pigdata;charset=utf8","root","");
-  $stmt = $conn->prepare("SELECT * FROM rooms WHERE code = ?");
+  $stmt = $conn->prepare("SELECT * FROM pvt_rooms WHERE password = ?");
   $stmt->execute([$roomCode]);
   $room = $stmt->fetch();
   if($room) {
-      header("location:chat_room.php?id={$room['id']}");
+      header("location:chat_room.php?pid={$room['id']}");
       die();
   } else {
-      echo "Invalid room code";
+      echo "รหัสห้องผิด";
   }
 }
 ?>
