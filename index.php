@@ -7,6 +7,24 @@ if(isset($_SESSION['id'])){
     header("location:login.php");
     die();
 }
+// check if form is submitted
+if(isset($_POST['roomSelect'])){
+  $selectedRoomId = $_POST['roomSelect'];
+  header("location:chat_room.php?id=$selectedRoomId");
+  die();
+} elseif(isset($_POST['roomCode'])) {
+  $roomCode = $_POST['roomCode'];
+  $conn=new PDO("mysql:host=localhost;dbname=pigdata;charset=utf8","root","");
+  $stmt = $conn->prepare("SELECT * FROM rooms WHERE code = ?");
+  $stmt->execute([$roomCode]);
+  $room = $stmt->fetch();
+  if($room) {
+      header("location:chat_room.php?id={$room['id']}");
+      die();
+  } else {
+      echo "Invalid room code";
+  }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -48,6 +66,20 @@ if(isset($_SESSION['id'])){
     </form>
 
 </div>
+<form id="codeForm" action="" method="post">
+
+    <label>เข้าร่วมโดยรหัส</label>
+
+    <div class="field has-addons">
+      <div class="control">
+        <input class="input" type="text" name="roomCode" placeholder="Enter code">
+      </div>
+      <div class="control">
+        <button type="submit" class="button is-primary">Join</button>
+      </div>
+    </div>
+
+  </form>
 </body>
 <script>
   const roomSelect = document.getElementById("roomSelect");
