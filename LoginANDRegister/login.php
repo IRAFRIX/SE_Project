@@ -61,6 +61,8 @@
     </div>
     <br>
     <p align= "center">ถ้ายังไม่ได้เป็นสมาชิก <a href="register.php">กรุณาสมัครสมาชิก</a></p>
+    <br>
+    <p align= "center"><a href="../homepage.php">กลับสู่หน้าหลัก</a></p>
     </div>
 </body>
 </html>
