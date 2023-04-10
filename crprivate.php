@@ -6,6 +6,7 @@
     //$Roomid=$_POST['room'];
     //ตัวแปร
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,16 +31,6 @@
                 hide_eye.style.display = "none";
             }
         }
-		
-		function createPassword() {
-            var passwordInputBlock = document.getElementById("password-input-block");
-			passwordInputBlock.classList.remove("is-hidden");
-		}
-		
-		function closePassword() {
-            var passwordInputBlock = document.getElementById("password-input-block");
-			passwordInputBlock.classList.add("is-hidden");
-		}
 		
 		function savePassword() {
 			var passwordInput = document.getElementById("password-input");
