@@ -2,7 +2,7 @@
     session_start();
 
     $RoomName=$_POST['rn'];
-    $Roomid=$_POST['room'];
+    $Roomid=$_POST['rid'];
     //$PriRoomid=$_POST['roomCode']
     //ตัวแปร
 ?>

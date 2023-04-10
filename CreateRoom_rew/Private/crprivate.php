@@ -42,6 +42,14 @@
 				closePassword();
 			}
 		}
+
+        let rid = [];
+        for (let i = 1; i <= 9999; i++) {
+        let id = ("000" + i).slice(-4);
+        ids.push(id);
+        }
+        console.log(rid);
+
 	</script>
 </head>
 <body>
@@ -55,7 +63,7 @@
                             กรอกข้อมูลห้องแชทแบบ Private
                         </p>
                     </header>
-                    <form method="post" action="createroomsucces.php">
+                    <form method="post" action="crsuccespri.php">
                     <div class="card-content">
                         <div class="field">
                             <label class="label">ชื่อห้องแชท</label>
