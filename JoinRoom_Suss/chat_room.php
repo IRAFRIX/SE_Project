@@ -38,7 +38,6 @@ if(isset($_GET['id'])){
   echo "ไม่พบห้องที่เลือก3";
 }
 ?>
-
-    <p align= "center"><a href="index.php">กลับสู่หน้าหลัก</a></p>
+  <p align= "center"><a href="../homepage.php">กลับสู่หน้าหลัก</a></p>
 </body>
 </html>
