@@ -2,11 +2,6 @@
 // include file config.php
 require_once "config.php";
 
-// check if user is not logged in, redirect to login page
-if(isset($_SESSION['id'])){
-    header("location:login.php");
-    die();
-}
 // check if form is submitted
 if(isset($_POST['roomSelect'])){
   $selectedRoomId = $_POST['roomSelect'];
