@@ -32,5 +32,6 @@
         สร้างห้อง <?php echo $RoomName; ?> สำเร็จแล้ว!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
+    <p align= "center"><a href="/SE_Project/homepage.php">กลับสู่หน้าหลัก</a></p>
 </body>
 </html>

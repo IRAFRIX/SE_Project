@@ -21,6 +21,7 @@
 </head>
 <body>
     <div class="block">
+    <div class="container">
         <div class="card">
             <header class="card-header has-background-primary has-text-white">
                 <p class="card-header-title">กรอกข้อมูลห้องแชท</p>
@@ -44,5 +45,7 @@
                 </div>
         </div>
     </div>
+    </div>
+    <p align= "center"><a href="../roomtypeselect.php">กลับสู่หน้าสร้างห้อง</a></p>
 </body>
 </html>

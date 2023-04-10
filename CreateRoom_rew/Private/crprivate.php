@@ -85,3 +85,4 @@
                 </div>
             </div>
         </div>
+        <p align= "center"><a href="../roomtypeselect.php">กลับสู่หน้าสร้างห้อง</a></p>

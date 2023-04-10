@@ -1,9 +1,5 @@
 <?php
     session_start();
-    if(isset($_SESSION["username"]) && $_SESSION["id"]==session_id()){
-      header("location:index.php");
-      die();
-    }
     //$RoomName=$_POST['rn'];
     //$RoomPassword=$_POST['rpwd'];
     //$Roomid=$_POST['room'];
@@ -37,5 +33,6 @@
             <button class="button is-danger" onclick="location.href='/SE_Project/CreateRoom_rew/Private/crprivate.php'">Private</button>
         </div>
     </div>
+    <p align= "center"><a href="../homepage.php">กลับสู่หน้าหลัก</a></p>
 </body>
 </html>
