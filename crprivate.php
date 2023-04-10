@@ -52,7 +52,7 @@
                 <div class="card">
                     <header class="card-header has-background-primary has-text-white">
                         <p class="card-header-title">
-                            กรอกข้อมูลห้องแชท
+                            กรอกข้อมูลห้องแชทแบบ Private
                         </p>
                     </header>
                     <form method="post" action="createroomsucces.php">
@@ -62,36 +62,9 @@
                             <div class="control">
                                 <input type="text" name="rn" class="input" required>
                             </div>
-                        
-                    <!--ปุ่มเปิด-ปิด Private-->
-                    <div class="field is-grouped mt-5">
-                    <div class="control">
-                        <button class="button is-success" onclick="closePassword()">Public</button>
-                    </div>
-                    <div class="control">
-                        <button class="button is-danger" onclick="createPassword()">Private</button>
-                        <div id="password-input-block" class="is-hidden mt-3">
+                            <label class="label">รหัสห้องแชท</label>
                             <input type="password" id="password-input" class="input mb-3" placeholder="Enter your new password">
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Checkbox Public, Private-->
-                            <div class="field">
-							<label class="label">Privacy</label>
-							<div class="control">
-								<label class="checkbox">
-									<input type="checkbox" name="privacy" id="privacy-checkbox" value="private" onclick="createPassword()">
-									Private
-                                    <input type="password" id="password-input" class="input mb-3" placeholder="Enter your new password">
-								</label>
-							</div>
-						</div>
-						<div class="field" id="password-input-container" style="display: none;">
-							<label class="label">Password</label>
-							<div class="control">
-								<input type="password" name="password" id="password-input" class="input password-input">
-							</div>
-						</div>
+                            
                             <!--<form method="post" action="createroomsucces.php">-->
                             <div class="field is-grouped mt-5">
                             <div class="control">
