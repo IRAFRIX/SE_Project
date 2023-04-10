@@ -5,12 +5,8 @@
     //$Roomid=$_POST['rid'];
     //$PriRoomid=$_POST['roomCode']
     //ตัวแปร
-    $rid = array();
-    for ($i = 1; $i <= 4999; $i++) {
-        $id = sprintf('%04d', $i);
-        array_push($rid, $id);
-    }
-    echo implode(', ', $rid);
+    $rid = sprintf('%04d', rand(0001, 9999));
+    echo "id ของห้องคุณคือ " . $rid;
 
 
 ?>
@@ -27,7 +23,7 @@
 </head>
 <body>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
-        สร้างห้อง <?php echo $RoomName; ?> (ID: <?php echo $Roomid; ?>) สำเร็จแล้ว!
+        สร้างห้อง <?php echo $RoomName; ?> (ID: <?php echo $rid; ?>) สำเร็จแล้ว!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 </body>

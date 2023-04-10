@@ -46,13 +46,6 @@
 			}
 		}
 
-        let rid = [];
-        for (let i = 5001; i <= 9999; i++) {
-        let id = ("000" + i).slice(-4);
-        rid.push(id);
-        }
-        console.log(rid);
-
 	</script>
 </head>
 <body>
