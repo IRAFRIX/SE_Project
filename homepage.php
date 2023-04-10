@@ -75,6 +75,18 @@ if(isset($_POST['roomSelect'])){
     </div>
 
   </form>
+  <?php
+    session_start();
+    if(isset($_SESSION['id'])){
+    // ผู้ใช้งานได้ทำการ login แล้ว ให้แสดงปุ่มออกจากระบบ
+      echo '<form action="LoginANDRegister/logout.php" method="POST">
+            <button type="submit">ออกจากระบบ</button>
+      </form>';
+    } else {
+    // ผู้ใช้งานยังไม่ได้ทำการ login ให้แสดงปุ่ม login
+      echo '';
+    }
+  ?>
 </body>
 <script>
   const roomSelect = document.getElementById("roomSelect");
