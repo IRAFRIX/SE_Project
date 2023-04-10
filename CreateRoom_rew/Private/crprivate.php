@@ -63,7 +63,7 @@
                             กรอกข้อมูลห้องแชทแบบ Private
                         </p>
                     </header>
-                    <form method="post" action="crsuccespri.php">
+                    <form method="post" action="/SE_Project/CreateRoom_rew/Private/crsuccespri.php">
                     <div class="card-content">
                         <div class="field">
                             <label class="label">ชื่อห้องแชท</label>
