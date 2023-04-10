@@ -2,7 +2,6 @@
     session_start();
 
     $RoomName=$_POST['rn'];
-    $RoomPassword=$_POST['rpwd'];
     $Roomid=$_POST['room'];
     //$PriRoomid=$_POST['roomCode']
     //ตัวแปร

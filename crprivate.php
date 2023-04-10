@@ -5,17 +5,6 @@
     //$RoomPassword=$_POST['rpwd'];
     //$Roomid=$_POST['room'];
     //ตัวแปร
-    if(isset($_POST['submit'])){
-        $RoomName=$_POST['rn'];
-        $Roomid=$_POST['room'];
-
-        if($_POST['room'] == "private" && $_POST['password-input'] == ""){
-            echo "กรุณาใส่รหัส";
-        } else {
-            header("Location: createroomsucces.php");
-            exit();
-        }
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
