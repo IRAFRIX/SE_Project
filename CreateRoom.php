@@ -95,6 +95,23 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--Checkbox Public, Private-->
+                            <div class="field">
+							<label class="label">Privacy</label>
+							<div class="control">
+								<label class="checkbox">
+									<input type="checkbox" name="privacy" id="privacy-checkbox" value="private" onclick="createPassword()">
+									Private
+                                    <input type="password" id="password-input" class="input mb-3" placeholder="Enter your new password">
+								</label>
+							</div>
+						</div>
+						<div class="field" id="password-input-container" style="display: none;">
+							<label class="label">Password</label>
+							<div class="control">
+								<input type="password" name="password" id="password-input" class="input password-input">
+							</div>
+						</div>
                             <!--<form method="post" action="createroomsucces.php">-->
                             <div class="field is-grouped mt-5">
                             <div class="control">
@@ -111,4 +128,3 @@
                 </div>
             </div>
         </div>
-
