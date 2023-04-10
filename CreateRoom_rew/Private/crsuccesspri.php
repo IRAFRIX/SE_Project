@@ -3,12 +3,17 @@
 
     $RoomName=$_POST['rn'];
     $RoomPassword=$_POST['rpwd'];
-    //$Roomid=$_POST['room'];
-    //$PriRoomid=$_POST['roomCode']
     //ตัวแปร
-    $rid = sprintf('%04d', rand(0001, 9999));
-    echo "id ของห้องคุณคือ " . $rid;
+    //$rid = sprintf('%04d', rand(0001, 9999));
+    //echo "id ของห้องคุณคือ " . $rid;
+    
+    $u = (int)($_SESSION["user_id"]);
 
+    $conn = new PDO("mysql:host=localhost;dbname=pigdata;charset=utf8","root","");
+    $sql1 = "INSERT INTO pvt_rooms (name,created_by,password) VALUES ('$RoomName','$u','$RoomPassword')";
+    $conn->exec($sql1);
+
+    $conn=null;
 
 ?>
 
@@ -24,7 +29,7 @@
 </head>
 <body>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
-        สร้างห้อง <?php echo $RoomName; ?> (ID: <?php echo $rid; ?>) สำเร็จแล้ว!
+        สร้างห้อง <?php echo $RoomName; ?> สำเร็จแล้ว!
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 </body>

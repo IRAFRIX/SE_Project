@@ -1,9 +1,9 @@
 <?php
     session_start();
-    if(isset($_SESSION["username"]) && $_SESSION["id"]==session_id()){
-        header("location:index.php");
-        die();
-    }
+    //if(isset($_SESSION["username"]) && $_SESSION["id"]==session_id()){
+        //header("location:index.php");
+        //die();
+   // }
     //$RoomName=$_POST['rn'];
     //$RoomPassword=$_POST['rpwd'];
     //$Roomid=$_POST['room'];
@@ -59,7 +59,7 @@
                             กรอกข้อมูลห้องแชทแบบ Private
                         </p>
                     </header>
-                    <form method="post" action="/SE_Project/CreateRoom_rew/Private/crsuccespri.php">
+                    <form method="post" action="/SE_Project/CreateRoom_rew/Private/crsuccesspri.php">
                     <div class="card-content">
                         <div class="field">
                             <label class="label">ชื่อห้องแชท</label>
@@ -67,7 +67,7 @@
                                 <input type="text" name="rn" class="input" required>
                             </div>
                             <label class="label">รหัสห้องแชท</label>
-                            <input type="password" id="password-input" class="input mb-3" placeholder="Enter your new password">
+                            <input type="password" id="password-input" name="rpwd" class="input mb-3" placeholder="Enter your new password">
                             
                             <!--<form method="post" action="createroomsucces.php">-->
                             <div class="field is-grouped mt-5">

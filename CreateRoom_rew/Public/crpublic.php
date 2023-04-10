@@ -1,9 +1,9 @@
 <?php
     session_start();
-    if(isset($_SESSION["username"]) && $_SESSION["id"]==session_id()){
-        header("location:index.php");
-        die();
-    }
+    //if(isset($_SESSION["username"]) && $_SESSION["id"]==session_id()){
+        //header("location:index.php");
+        //die();
+    //}
     //$RoomName=$_POST['rn'];
     //$RoomPassword=$_POST['rpwd'];
     //$Roomid=$_POST['room'];
@@ -25,7 +25,7 @@
             <header class="card-header has-background-primary has-text-white">
                 <p class="card-header-title">กรอกข้อมูลห้องแชท</p>
             </header>
-            <form method="post" action="/SE_Project/CreateRoom_rew/Public/crsuccespub.php">
+            <form method="post" action="/SE_Project/CreateRoom_rew/Public/crsuccesspub.php">
                 <div class="card-content">
                     <div class="field">
                         <label class="label">ชื่อห้องแชท</label>
