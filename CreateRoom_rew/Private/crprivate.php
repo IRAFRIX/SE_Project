@@ -1,6 +1,9 @@
 <?php
     session_start();
-
+    if(isset($_SESSION["username"]) && $_SESSION["id"]==session_id()){
+        header("location:index.php");
+        die();
+    }
     //$RoomName=$_POST['rn'];
     //$RoomPassword=$_POST['rpwd'];
     //$Roomid=$_POST['room'];
@@ -44,9 +47,9 @@
 		}
 
         let rid = [];
-        for (let i = 1; i <= 9999; i++) {
+        for (let i = 5001; i <= 9999; i++) {
         let id = ("000" + i).slice(-4);
-        ids.push(id);
+        rid.push(id);
         }
         console.log(rid);
 
