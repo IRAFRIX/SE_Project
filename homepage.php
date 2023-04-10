@@ -35,6 +35,12 @@ if(isset($_POST['roomSelect'])){
 <body>
 <div>
 <h1 class="title has-text-centered">PigPig</h1>
+  <?php
+    // ผู้ใช้งานได้ทำการ login แล้ว ให้แสดงปุ่มออกจากระบบ
+      echo '<form action="CreateRoom_rew/roomtypeselect.php" method="POST">
+            <button type="submit">สร้างห้อง</button>
+      </form>';
+  ?>
   <form id="roomForm" action="chat_room.php" method="post">
 
     <label>เข้าห้อง</label>
@@ -79,7 +85,7 @@ if(isset($_POST['roomSelect'])){
     session_start();
     if(isset($_SESSION['id'])){
     // ผู้ใช้งานได้ทำการ login แล้ว ให้แสดงปุ่มออกจากระบบ
-      echo '<form action="homepage.php" method="POST">
+      echo '<form action="LoginANDRegister/logout.php" method="POST">
             <button type="submit">ออกจากระบบ</button>
       </form>';
     } else {
