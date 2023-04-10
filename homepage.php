@@ -34,7 +34,7 @@ if(isset($_POST['roomSelect'])){
 </head>
 <body>
 <div>
-
+<h1 class="title has-text-centered">PigPig</h1>
   <form id="roomForm" action="chat_room.php" method="post">
 
     <label>เข้าห้อง</label>
@@ -75,6 +75,20 @@ if(isset($_POST['roomSelect'])){
     </div>
 
   </form>
+  <?php
+    session_start();
+    if(isset($_SESSION['id'])){
+    // ผู้ใช้งานได้ทำการ login แล้ว ให้แสดงปุ่มออกจากระบบ
+      echo '<form action="homepage.php" method="POST">
+            <button type="submit">ออกจากระบบ</button>
+      </form>';
+    } else {
+    // ผู้ใช้งานยังไม่ได้ทำการ login ให้แสดงปุ่ม login
+      echo '<form action="LoginANDRegister/login.php" method="POST">
+            <button type="submit">เข้าสู่ระบบ</button>
+      </form>';
+    }
+  ?>
 </body>
 <script>
   const roomSelect = document.getElementById("roomSelect");

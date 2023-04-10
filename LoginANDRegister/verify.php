@@ -15,7 +15,7 @@
         $_SESSION["role"]=$data["role"];
         $_SESSION["user_id"]=$data["id"];
         $_SESSION["id"]=session_id();
-        header("Location:index.php");
+        header("Location:../homepage.php");
         die();
     }else{
         $_SESSION["error"]=1;
