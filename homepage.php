@@ -34,7 +34,7 @@ if(isset($_POST['roomSelect'])){
 </head>
 <body>
 <div>
-
+<h1 class="title has-text-centered">PigPig</h1>
   <form id="roomForm" action="chat_room.php" method="post">
 
     <label>เข้าห้อง</label>
