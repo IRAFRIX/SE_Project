@@ -3,9 +3,16 @@
 
     $RoomName=$_POST['rn'];
     $RoomPassword=$_POST['rpwd'];
-    $Roomid=$_POST['room'];
+    //$Roomid=$_POST['room'];
     //$PriRoomid=$_POST['roomCode']
     //ตัวแปร
+    $rid = array();
+    for ($i = 5001; $i <= 9999; $i++) {
+        $id = sprintf('%04d', $i);
+        array_push($rid, $id);
+    }
+    echo implode(', ', $rid);
+
 ?>
 
 <!DOCTYPE html>

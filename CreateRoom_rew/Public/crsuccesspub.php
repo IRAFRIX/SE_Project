@@ -2,9 +2,17 @@
     session_start();
 
     $RoomName=$_POST['rn'];
-    $Roomid=$_POST['rid'];
+    //$Roomid=$_POST['rid'];
     //$PriRoomid=$_POST['roomCode']
     //ตัวแปร
+    $rid = array();
+    for ($i = 1; $i <= 4999; $i++) {
+        $id = sprintf('%04d', $i);
+        array_push($rid, $id);
+    }
+    echo implode(', ', $rid);
+
+
 ?>
 
 <!DOCTYPE html>
