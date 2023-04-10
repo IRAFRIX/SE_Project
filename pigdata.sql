@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2023 at 02:18 PM
+-- Generation Time: Apr 10, 2023 at 05:56 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -44,7 +44,7 @@ CREATE TABLE `messages` (
 CREATE TABLE `pvt_rooms` (
   `id` int(6) UNSIGNED NOT NULL,
   `name` varchar(30) NOT NULL,
-  `created_by` int(6) UNSIGNED NOT NULL,
+  `created_by` int(11) NOT NULL,
   `password` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -64,7 +64,7 @@ INSERT INTO `pvt_rooms` (`id`, `name`, `created_by`, `password`) VALUES
 CREATE TABLE `rooms` (
   `id` int(6) UNSIGNED NOT NULL,
   `name` varchar(30) NOT NULL,
-  `created_by` int(6) UNSIGNED NOT NULL
+  `created_by` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -193,18 +193,6 @@ ALTER TABLE `users_rooms`
 ALTER TABLE `messages`
   ADD CONSTRAINT `messages_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `messages_ibfk_2` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`) ON DELETE CASCADE;
-
---
--- Constraints for table `pvt_rooms`
---
-ALTER TABLE `pvt_rooms`
-  ADD CONSTRAINT `pvt_rooms_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`) ON DELETE CASCADE;
-
---
--- Constraints for table `rooms`
---
-ALTER TABLE `rooms`
-  ADD CONSTRAINT `rooms_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `users_rooms`
