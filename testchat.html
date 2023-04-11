@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat Room</title>
+    <style>
+      #messages-container {
+        height: 300px;
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="messages-container"></div>
+    <form onsubmit="sendMessage(); return false;">
+      <input type="text" id="messageInput">
+      <button type="submit">Send</button>
+    </form>
+    <textarea id="chatLog" rows="10" cols="50" readonly></textarea>
+    <script>
+      // Create a new WebSocket connection to the server
+      const socket = new WebSocket('ws://localhost:8080');
+      
+      // When a message is received from the server, add it to the chat log
+      socket.onmessage = event => {
+        const messageData = JSON.parse(event.data);
+        const chatLog = document.getElementById('chatLog');
+        const messageTime = new Date(messageData.timestamp).toLocaleTimeString();
+        const messageText = `${messageTime} [${messageData.sender}]: ${messageData.text}\n`;
+        chatLog.value += messageText;
+        chatLog.scrollTop = chatLog.scrollHeight;
+        
+        // Start a timer to clear the chat log after 60 seconds
+        setTimeout(() => {
+          chatLog.value = chatLog.value.replace(messageText, '');
+        }, 60000);
+      };
+      
+      // When the user submits a new message, send it to the server
+      function sendMessage() {
+        const messageInput = document.getElementById('messageInput');
+        const message = messageInput.value;
+        socket.send(JSON.stringify({
+          sender: 'me',
+          text: message,
+          timestamp: new Date().getTime()
+        }));
+        messageInput.value = '';
+      }
+    </script>
+  </body>
+</html>

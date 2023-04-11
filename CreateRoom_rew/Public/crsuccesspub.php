@@ -8,7 +8,7 @@
     //$rid = sprintf('%04d', rand(0001, 9999));
     //echo "id ของห้องคุณคือ " . $rid;
     $u = (int)($_SESSION["user_id"]);
-
+    //การเชื่อมต่อdatabase
     $conn = new PDO("mysql:host=localhost;dbname=pigdata;charset=utf8","root","");
     $sql1 = "INSERT INTO rooms (name,created_by) VALUES ('$RoomName','$u')";
     $conn->exec($sql1);
