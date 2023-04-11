@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <title>Document</title>
-     <!-- <link rel="icon" href="logo.jpg" type="image/icon type"> -->
+    <link rel="icon" href="../../logo2.png" type="image/icon type" >
 </head>
 <body>
 <div class="bg-image">

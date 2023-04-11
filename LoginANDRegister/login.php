@@ -23,7 +23,7 @@ if (isset($_SESSION['id'])) {
         }
     </style>
     <title>Login</title>
-    <!-- <link rel="icon" href="logo.jpg" type="image/icon type"> -->
+    <link rel="icon" href="../logo2.png" type="image/icon type">
 </head>
 
 <body>
