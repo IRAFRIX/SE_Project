@@ -26,7 +26,6 @@ if (isset($_POST['roomSelect'])) {
 
 <head>
   <title>homepage</title>
-   <!-- <link rel="icon" href="logo.jpg" type="image/icon type"> -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -44,12 +43,50 @@ if (isset($_POST['roomSelect'])) {
 </head>
 
 <body>
-  <div class="bg-image">
-    <div class="container">
-      <img src="header.jpg">
+<div class="bg-image">
+  <!-- open nav -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="logo.jpg" alt="">
+      </a>
     </div>
+
+
+    <div class="navbar-menu" id="nav-links">
+      <div class="navbar-start">
+      <a class="navbar-item" >   </a>
+      <a class="navbar-item" >   </a>
+        <a class="navbar-item" href="/SE_Project/CreateRoom_rew/roomtypeselect.php">
+          Join Room
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item" >
+              About Me
+            </a>
+            <a class="navbar-item ">
+              Jobs
+            </a>
+            <a class="navbar-item">
+              Contact
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              Report an issue
+            </a>
+          </div>
+        </div>
+      </div>
+  </nav>
+  <!-- close nav -->
+  
+<br>
     <div>
-      <h1 class="title has-text-centered">PigPig</h1>
       <?php
       session_start();
       if (isset($_SESSION['id'])) {
@@ -115,7 +152,11 @@ if (isset($_POST['roomSelect'])) {
       </form>';
     }
     ?>
+    <div class="container">
+      <img src="header.jpg">
+    </div>
   </div>
+
 </body>
 <script>
   const roomSelect = document.getElementById("roomSelect");
