@@ -18,6 +18,7 @@ if (isset($_SESSION['id'])) {
     <!-- CSS only -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>Register</title>
+     <!-- <link rel="icon" href="logo.jpg" type="image/icon type"> -->
 </head>
 
 <body>

@@ -28,9 +28,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <div class="notification is-black" role="alert">
         สร้างห้อง <?php echo $RoomName; ?> สำเร็จแล้ว!
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <p align= "center"><button class="button is-warning is-light" onclick="location.href='/SE_Project/homepage.php'">กลับสู่หน้าหลัก</a></p>
 </body>
