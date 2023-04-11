@@ -32,10 +32,10 @@ session_start();
     <div class="container">
       <img src="../header.jpg">
     </div>
-    <section class="hero is-black">
+    <section align="center" class="hero is-black">
       <div class="hero-body">
         <p class="title">
-          เลือกรูปแบบห้องแชทของคุณ
+          เลือกรูปแบบห้องแชทของคุณตรงได้เลย !
         </p>
       </div>
     </section>
