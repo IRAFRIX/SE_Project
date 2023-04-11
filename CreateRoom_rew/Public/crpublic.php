@@ -41,8 +41,8 @@ session_start();
                 </div>
                 <div class="container">
                     <div class="card">
-                        <header class="card-header has-background ">
-                            <p class="card-header-title">กรอกข้อมูลห้องแชท</p>
+                        <header class="card-header has-background-black ">
+                            <p class="card-header-title has-text-white">กรอกข้อมูลห้องแชท Pigpig</p>
                         </header>
                         <form method="post" action="/SE_Project/CreateRoom_rew/Public/crsuccesspub.php">
                             <div class="card-content">
@@ -55,10 +55,10 @@ session_start();
                                 </div>
                                 <div class="field is-grouped mt-5">
                                     <div class="control">
-                                        <button type="submit" class="button is-dark">Submit</button>
+                                        <button type="submit" class="button is-dark">ไปแชทกันเลย!</button>
                                     </div>
                                     <div class="control">
-                                        <button type="reset" class="button is-light">Reset</button>
+                                        <button type="reset" class="button is-light">อยากล้างข้อมูลหรือเปล่า? กดปุ่มนี้สิ</button>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@ session_start();
                 </div>
             </div>
         </section>
-        <p align="center"><a href="../roomtypeselect.php">กลับสู่หน้าสร้างห้อง</a></p>
+        <p align="center"><button class="button is-warning is-light" onclick="location.href='../roomtypeselect.php'">กลับสู่หน้าสร้างห้อง</button></p>
     </div>
 </body>
 

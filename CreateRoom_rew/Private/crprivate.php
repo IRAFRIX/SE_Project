@@ -70,28 +70,28 @@ session_start();
                 </div>
                 <div class="container">
                     <div class="card ">
-                        <div class="card header">
-                            <p class="card-header-title ">
-                                กรอกข้อมูลห้องแชทแบบ Private
+                        <div class="card header has-background-black">
+                            <p class="card-header-title has-text-white">
+                                กรอกข้อมูลห้องแชท Pigpig แบบลับๆ
                             </p>
                         </div>
                         <form method="post" action="/SE_Project/CreateRoom_rew/Private/crsuccesspri.php">
                             <div class="card-content">
                                 <div class="field">
-                                    <label class="label">ชื่อห้องแชท</label>
+                                    <label class="label">ชื่อห้องแชท Pigpig ของคุณ</label>
                                     <div class="control">
                                         <input type="text" name="rn" class="input" required>
                                     </div>
-                                    <label class="label">รหัสห้องแชท</label>
+                                    <label class="label">รหัสห้องแชทแบบลับๆ</label>
                                     <input type="password" id="password-input" name="rpwd" class="input mb-3" placeholder="Enter your new password">
 
                                     <!--<form method="post" action="createroomsucces.php">-->
                                     <div class="field is-grouped mt-5">
                                         <div class="control ">
-                                            <button type="submit" class="button is-dark">Submit</button>
+                                            <button type="submit" class="button is-dark">ไปแชทกันเลย!</button>
                                         </div>
                                         <div class="control">
-                                            <button type="reset" class="button is-light">Reset</button>
+                                            <button type="reset" class="button is-light">อยากล้างข้อมูลหรือเปล่า? กดปุ่มนี้สิ</button>
                                         </div>
                                     </div>
                                     <!--</form>-->
@@ -102,6 +102,6 @@ session_start();
                 </div>
             </div>
         </section>
-        <p align="center"><a href="../roomtypeselect.php">กลับสู่หน้าสร้างห้อง</a></p>
+        <p align="center"><button class="button is-warning is-light" onclick="location.href='../roomtypeselect.php'">กลับสู่หน้าสร้างห้อง</button></p>
     </div>
 </body>

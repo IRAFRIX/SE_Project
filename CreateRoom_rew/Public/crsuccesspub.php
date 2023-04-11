@@ -8,7 +8,7 @@
     //$rid = sprintf('%04d', rand(0001, 9999));
     //echo "id ของห้องคุณคือ " . $rid;
     $u = (int)($_SESSION["user_id"]);
-    //การเชื่อมต่อdatabase
+
     $conn = new PDO("mysql:host=localhost;dbname=pigdata;charset=utf8","root","");
     $sql1 = "INSERT INTO rooms (name,created_by) VALUES ('$RoomName','$u')";
     $conn->exec($sql1);
@@ -28,10 +28,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <div class="notification is-warning" role="alert">
         สร้างห้อง <?php echo $RoomName; ?> สำเร็จแล้ว!
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    <p align= "center"><a href="../roomtypeselect.php">กลับสู่หน้าสร้างห้อง</a></p>
+    <p align= "center"><button class="button is-warning is-light" onclick="location.href='/SE_Project/homepage.php'">กลับสู่หน้าหลัก</a></p>
 </body>
 </html>

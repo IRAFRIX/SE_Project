@@ -32,7 +32,7 @@ session_start();
     <div class="container">
       <img src="../header.jpg">
     </div>
-    <section class="hero is-info">
+    <section class="hero is-black">
       <div class="hero-body">
         <p class="title">
           เลือกรูปแบบห้องแชทของคุณ
@@ -43,14 +43,14 @@ session_start();
     <div class="container is-flex is-justify-content-center">
       <div class="box">
         <!-- สร้างปุ่ม public -->
-        <button class="button is-primary" onclick="location.href='/SE_Project/CreateRoom_rew/Public/crpublic.php'">Public</button>
+        <button class="button is-warning is-large" onclick="location.href='/SE_Project/CreateRoom_rew/Public/crpublic.php'">Public</button>
 
         <!-- สร้างปุ่ม private -->
-        <button class="button is-danger" onclick="location.href='/SE_Project/CreateRoom_rew/Private/crprivate.php'">Private</button>
+        <button class="button is-black is-large" onclick="location.href='/SE_Project/CreateRoom_rew/Private/crprivate.php'">Private</button>
       </div>
     </div>
     <br>
-    <p align="center"><a href="../homepage.php">กลับสู่หน้าหลัก</a></p>
+    <p align="center"><button class="button is-warning is-light" onclick="location.href='../homepage.php'">กลับสู่หน้าหลัก</button></p>
   </div>
 </body>
 
