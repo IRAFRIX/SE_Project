@@ -32,26 +32,26 @@
       if ($room) {
         echo "กำลังอยู่ในห้อง: " . $room['name'] . "";
       } else {
-        echo "ไม่พบห้องที่เลือก1";
+        echo "ไม่พบห้องที่เลือก";
       }
       $conn = null;
     } else if (isset($_GET['pid'])) {
       $id = $_GET['pid'];
-      $sql = "SELECT name FROM pvt_rooms WHERE id=?";
+      $sql = "SELECT name,password FROM pvt_rooms WHERE id=?";
       $stmt = $conn->prepare($sql);
       $stmt->execute([$id]);
       $room = $stmt->fetch();
       if ($room) {
         echo "กำลังอยู่ในห้อง: " . $room['name'] . "";
+        echo "<br>รหัสห้องคือ: " . $room['password'] . "";
       } else {
-        echo "ไม่พบห้องที่เลือก2";
+        echo "ไม่พบห้องที่เลือก";
       }
       $conn = null;
     } else {
-      echo "ไม่พบห้องที่เลือก3";
+      echo "ไม่พบห้องที่เลือก";
     }
     ?>
-    <h1>Main Content</h1>
     <div class="container">
       <img src="../header.jpg">
     </div>
