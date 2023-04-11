@@ -57,14 +57,23 @@ if (isset($_POST['roomSelect'])) {
       <div class="navbar-start">
       <a class="navbar-item" >   </a>
       <a class="navbar-item" >   </a>
+      <?php
+      // ตรวจสอบว่าผู้ใช้เข้าสู่ระบบหรือไม่
+      session_start(); // เปิด session
+      if (isset($_SESSION['user_id'])) { // ตรวจสอบว่ามีตัวแปร session ชื่อ username หรือไม่
+      ?>
         <a class="navbar-item" href="/SE_Project/CreateRoom_rew/roomtypeselect.php">
-          Join Room
+          Create Room
         </a>
+        <?php
+      }else{
+
+      }
+      ?>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
             More
           </a>
-
           <div class="navbar-dropdown">
             <a class="navbar-item" >
               About Me
@@ -87,18 +96,7 @@ if (isset($_POST['roomSelect'])) {
   
 <br>
     <div>
-      <?php
-      session_start();
-      if (isset($_SESSION['id'])) {
-        // ผู้ใช้งานได้ทำการ login แล้ว ให้แสดงปุ่มออกจากระบบ
-        echo '<form action="CreateRoom_rew/roomtypeselect.php" method="POST">
-            <button type="submit">สร้างห้อง</button>
-      </form>';
-      } else {
-        // ผู้ใช้งานยังไม่ได้ทำการ login ให้แสดงปุ่ม login
-        echo '';
-      }
-      ?>
+
       <form id="roomForm" action="/JoinRoom_Suss/chat_room.php" method="post">
 
         <label>เข้าห้อง</label>
@@ -126,7 +124,7 @@ if (isset($_POST['roomSelect'])) {
 
     </div>
     <form id="codeForm" action="" method="post">
-
+      <br>
       <label>เข้าร่วมโดยรหัส</label>
 
       <div class="field has-addons">
@@ -142,13 +140,13 @@ if (isset($_POST['roomSelect'])) {
     <?php
     if (isset($_SESSION['id'])) {
       // ผู้ใช้งานได้ทำการ login แล้ว ให้แสดงปุ่มออกจากระบบ
-      echo '<form action="LoginANDRegister/logout.php" method="POST">
-            <button type="submit">ออกจากระบบ</button>
+      echo '<br><form action="LoginANDRegister/logout.php" method="POST">
+            <button class="button is-warning is-light" type="submit">ออกจากระบบ</button>
       </form>';
     } else {
       // ผู้ใช้งานยังไม่ได้ทำการ login ให้แสดงปุ่ม login
-      echo '<form action="LoginANDRegister/login.php" method="POST">
-            <button type="submit">เข้าสู่ระบบ</button>
+      echo '<br><form action="LoginANDRegister/login.php" method="POST">
+      <button class="button is-primary is-light" type="submit">เข้าสู่ระบบ</button>
       </form>';
     }
     ?>

@@ -36,7 +36,7 @@ session_start();
     <section align="center" class="hero is-black">
       <div class="hero-body">
         <p class="title">
-          เลือกรูปแบบห้องแชทของคุณตรงได้เลย !
+          เลือกรูปแบบห้องแชทของคุณตรงนี้ได้เลย !
         </p>
       </div>
     </section>
