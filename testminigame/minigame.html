@@ -40,7 +40,7 @@
 
 
         function startGame() {
-            myGamePiece = new component(30, 30, "pig.png", 10, 120, "image");
+            myGamePiece = new component(30, 30, "pigpan_stand.png", 10, 120, "image");
             myGamePiece.gravity = 0.05;
             myScore = new component("30px", "Consolas", "white", 280, 40, "text");
             myBackground = new component(656, 270, "location_pan.jpg", 0, 0, "image");
@@ -170,9 +170,9 @@
 
         function accelerate(n) {
             if (n <= 0) {
-                myGamePiece.image.src = "pig1.jpg";
+                myGamePiece.image.src = "pigpan_fly.png";
             } else {
-                myGamePiece.image.src = "pig.png";
+                myGamePiece.image.src = "pigpan_stand.png";
             }
             myGamePiece.gravity = n;
         }
@@ -190,6 +190,7 @@
 <body onload="startGame()" class="my-page">
 <br>
     <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+    <button onclick="location.reload()">Refresh</button>
     <p>Use the ACCELERATE button to stay in the air</p>
     <p>How long can you stay alive?</p>
 
