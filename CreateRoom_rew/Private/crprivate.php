@@ -80,7 +80,7 @@ session_start();
                                 <div class="field">
                                     <label class="label">ชื่อห้องแชท Pigpig ของคุณ</label>
                                     <div class="control">
-                                        <input type="text" name="rn" class="input" required>
+                                        <input type="text" name="rn" class="input" placeholder="Enter your room's name" required>
                                     </div>
                                     <label class="label">รหัสห้องแชทแบบลับๆ</label>
                                     <input type="password" id="password-input" name="rpwd" class="input mb-3" placeholder="Enter your new password">

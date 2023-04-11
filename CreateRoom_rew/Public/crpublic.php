@@ -50,7 +50,7 @@ session_start();
                                 <div class="field">
                                     <label class="label">ชื่อห้องแชท</label>
                                     <div class="control">
-                                        <input type="text" name="rn" class="input" required>
+                                        <input type="text" name="rn" class="input" placeholder="Enter your room's name" required>
                                     </div>
 
                                 </div>
