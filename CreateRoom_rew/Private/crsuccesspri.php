@@ -3,9 +3,6 @@
 
     $RoomName=$_POST['rn'];
     $RoomPassword=$_POST['rpwd'];
-    //ตัวแปร
-    //$rid = sprintf('%04d', rand(0001, 9999));
-    //echo "id ของห้องคุณคือ " . $rid;
     
     $u = (int)($_SESSION["user_id"]);
 

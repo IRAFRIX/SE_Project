@@ -2,11 +2,6 @@
     session_start();
 
     $RoomName=$_POST['rn'];
-    //$Roomid=$_POST['rid'];
-    //$PriRoomid=$_POST['roomCode']
-    //ตัวแปร
-    //$rid = sprintf('%04d', rand(0001, 9999));
-    //echo "id ของห้องคุณคือ " . $rid;
     $u = (int)($_SESSION["user_id"]);
 
     $conn = new PDO("mysql:host=localhost;dbname=pigdata;charset=utf8","root","");
